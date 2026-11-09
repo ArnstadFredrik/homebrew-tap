@@ -1,18 +1,30 @@
-# ArnstadFredrik Tap
+# ArnstadFredrik's Homebrew Tap
 
-## How do I install these formulae?
+Egne apper fra Fredrik Solås Arnstad.
 
-`brew install arnstadfredrik/tap/<formula>`
+## Installere
 
-Or `brew tap arnstadfredrik/tap` and then `brew install <formula>`.
+```bash
+brew tap arnstadfredrik/tap https://github.com/ArnstadFredrik/homebrew-tap
+brew install --cask pdf-hefte
+```
 
-Or, in a `brew bundle` `Brewfile`:
+Eller kortere:
+
+```bash
+brew install arnstadfredrik/tap/pdf-hefte
+```
+
+Eller i en `brew bundle`-`Brewfile`:
 
 ```ruby
 tap "arnstadfredrik/tap"
-brew "<formula>"
+cask "pdf-hefte"
 ```
 
-## Documentation
+## Apper
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+| Cask | Beskrivelse |
+|---|---|
+| `pdf-hefte` | Lag printbare hefter av PDF-er (fra [web-pdf](https://github.com/ArnstadFredrik/web-pdf)) |
+| `font-cmu` | Computer Modern Unicode-skrifttyper |

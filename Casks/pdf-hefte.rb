@@ -9,5 +9,13 @@ cask "pdf-hefte" do
 
   app "PDF Hefte.app"
 
+  # Appen er ikke signert hos Apple; fjern karantenen slik at den
+  # åpner uten «høyreklikk → Åpne» / Systemvalg-godkjenning.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/PDF Hefte.app"],
+                   sudo: false
+  end
+
   zap trash: "~/Library/Application Support/PDF Hefte"
 end

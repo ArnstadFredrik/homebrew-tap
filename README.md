@@ -15,10 +15,18 @@ Eller kortere:
 brew install arnstadfredrik/tap/pdf-hefte
 ```
 
-Eller i en `brew bundle`-`Brewfile`:
+## Klarert tap (påkrevd)
+
+Homebrew krever nå at tredjeparts-taps bekreftes eksplisitt. Ved første tap/installering får du et spørsmål om å stole på tapet — svar `y`. For å godkjenne det på forhånd (f.eks. i skript eller CI):
+
+```bash
+brew trust arnstadfredrik/tap
+```
+
+I en `brew bundle`-`Brewfile` må tapet merkes som klarert:
 
 ```ruby
-tap "arnstadfredrik/tap"
+tap "arnstadfredrik/tap", trusted: true
 cask "pdf-hefte"
 ```
 

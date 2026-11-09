@@ -1,12 +1,16 @@
 # ArnstadFredrik's Homebrew Tap
 
-Egne apper fra Fredrik Solås Arnstad.
+Eget repo for apps og scripts.
 
 ## Installere
 
 ```bash
-brew tap arnstadfredrik/tap https://github.com/ArnstadFredrik/homebrew-tap
+brew tap arnstadfredrik/tap
 brew install --cask pdf-hefte
+```
+
+```bash
+brew trust arnstadfredrik/tap
 ```
 
 Eller kortere:
@@ -15,19 +19,11 @@ Eller kortere:
 brew install arnstadfredrik/tap/pdf-hefte
 ```
 
-## Klarert tap (påkrevd)
-
-Homebrew krever nå at tredjeparts-taps bekreftes eksplisitt. Ved første tap/installering får du et spørsmål om å stole på tapet — svar `y`. For å godkjenne det på forhånd (f.eks. i skript eller CI):
-
-```bash
-brew trust arnstadfredrik/tap
-```
-
-I en `brew bundle`-`Brewfile` må tapet merkes som klarert:
+I en `brew bundle`-`Brewfile` må repoet merkes som klarert:
 
 ```ruby
 tap "arnstadfredrik/tap", trusted: true
-cask "pdf-hefte"
+cask "pdf-hefte", trusted: true
 ```
 
 ## Apper

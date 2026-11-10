@@ -1,6 +1,6 @@
 cask "pdf-hefte" do
-  version "0.3.1"
-  sha256 "aca161d18b91b6ddb006b34b41f9ffef5f724363358c8dbee1978ec0ac100f10"
+  version "0.3.3"
+  sha256 "01f87b9f2fb33bf0414913321872f1d03c91765fa4ab55d09451339f04ed1c42"
 
   url "https://github.com/ArnstadFredrik/web-pdf/releases/download/v#{version}/PDF.Hefte-#{version}-arm64-mac.zip"
   name "PDF Hefte"
@@ -11,7 +11,7 @@ cask "pdf-hefte" do
 
   # Appen er ikke signert hos Apple; fjern karantenen slik at den
   # åpner uten «høyreklikk → Åpne» / Systemvalg-godkjenning.
-  postflight do
+  postflight_steps do
     system_command "/usr/bin/xattr",
                    args: ["-dr", "com.apple.quarantine", "#{appdir}/PDF Hefte.app"],
                    sudo: false

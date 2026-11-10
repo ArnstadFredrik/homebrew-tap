@@ -13,7 +13,7 @@ cask "pdf-hefte" do
   # åpner uten «høyreklikk → Åpne» / Systemvalg-godkjenning.
   postflight_steps do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", staged_path.join("PDF Hefte.app")],
+                   args: ["-dr", "com.apple.quarantine", "{{staged_path}}/PDF Hefte.app"],
                    sudo: false
   end
 

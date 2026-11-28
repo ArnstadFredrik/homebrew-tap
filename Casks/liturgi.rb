@@ -1,6 +1,6 @@
 cask "liturgi" do
-  version "0.0.5"
-  sha256 "274ce7f31c1b8edaeb4f4d75b4c7535441205e225cd8fadd5d7784b45f0d170d"
+  version "0.0.6"
+  sha256 "0e65d88e72379d68f1e5bf409e058609f8211369acbcb870c286b3ea15bdf957"
 
   url "https://github.com/ArnstadFredrik/liturgi-app/releases/download/v#{version}/Liturgi-#{version}-arm64.dmg"
   name "Liturgi"
